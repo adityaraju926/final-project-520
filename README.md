@@ -1,5 +1,8 @@
 # Obesity Risk Prediction
 
+## Project Video
+A detailed walkthrough of the project is available in this [video presentation](https://drive.google.com/file/d/1JjH9PCGdru1ZRHcb0vsMaw3sjfmqIaPD/view?usp=sharing).
+
 ## Project Overview
 This project tackles a critical public health challenge: predicting obesity risk in different demographic groups. Using machine learning, the analysis examines various demographic and socioeconomic factors to determine whether a group's obesity rate will be above or below the national median.
 
@@ -22,7 +25,6 @@ The models predict whether a specific demographic group's obesity rate is above 
 - **Important Note**:
   - The median is calculated across all demographic groups in the dataset
   - This provides a national benchmark for comparison
-  - The prediction is not relative to state-specific medians
 
 ## Dataset Description
 
@@ -175,20 +177,17 @@ Both files include a header section with:
 - Number of correct predictions
 - Overall accuracy
 - Additional performance metrics
-- Breakdown of predictions by state and category
+- Breakdown of predictions by state
 
 ## Future Improvements
 1. Data Enhancements:
    - Better handling of missing values
    - Additional demographic features
-   - Interaction terms between features
 
 2. Model Improvements:
    - Ensemble of both models
-   - More sophisticated neural network architectures
    - Advanced feature selection methods
 
 3. Evaluation Enhancements:
-   - Time-based validation
    - Additional cross-validation folds
    - More detailed demographic analysis
