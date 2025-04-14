@@ -140,15 +140,20 @@ Each file contains:
 - Actual vs. predicted values
 - Performance metrics
 
+### Evaluation Metrics
+Multiple metrics ensure comprehensive evaluation:
+- Accuracy: Overall prediction correctness
+- Precision: Minimizing false positives
+- Recall: Minimizing false negatives
+- F1 Score: Balance between precision and recall
+
 ### Understanding the Prediction Files
 
 #### Random Forest Predictions (`rf_predictions.csv`)
 - Format: CSV file with five columns
   - `State`: The state where the demographic group is located
-  - `Category`: The demographic category (e.g., "Young_LowIncome", "MiddleAged_HighEducation")
   - `Actual`: The true obesity rate classification (0 or 1)
   - `Predicted`: The model's prediction (0 or 1)
-  - `Confidence`: Probability score for the prediction
 - Usage:
   - Model performance analysis by state and demographic group
   - Identifying high-risk demographic groups in specific states
@@ -158,10 +163,8 @@ Each file contains:
 #### Neural Network Predictions (`nn_predictions.csv`)
 - Format: CSV file with five columns
   - `State`: The state where the demographic group is located
-  - `Category`: The demographic category (e.g., "Young_LowIncome", "MiddleAged_HighEducation")
   - `Actual`: The true obesity rate classification (0 or 1)
   - `Predicted`: The model's prediction (0 or 1)
-  - `Confidence`: Probability score for the prediction
 - Usage:
   - Comparing model performance with Random Forest across states and categories
   - Analyzing cases where models make different predictions for specific demographic groups
@@ -189,27 +192,3 @@ Both files include a header section with:
    - Time-based validation
    - Additional cross-validation folds
    - More detailed demographic analysis
-
-## Technical Details
-
-### Model Configurations
-
-Random Forest (Best Settings):
-- Number of trees: 100
-- Maximum depth: Unlimited
-- Minimum samples per split: 10
-- Minimum samples per leaf: 4
-
-Neural Network (Best Settings):
-- Layer architecture: [256, 128, 64, 32]
-- Learning rate: 0.001
-- Dropout rate: 0.1
-- Training epochs: 100
-- Best validation loss: 0.5810
-
-### Evaluation Metrics
-Multiple metrics ensure comprehensive evaluation:
-- Accuracy: Overall prediction correctness
-- Precision: Minimizing false positives
-- Recall: Minimizing false negatives
-- F1 Score: Balance between precision and recall
